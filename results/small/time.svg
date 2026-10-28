@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<rect width="1000" height="650" fill="white"/>
+<text x="70" y="35" font-size="24">small: Time, seconds</text>
+<path d="M80 540H940" stroke="#ddd"/>
+<text x="5" y="544" font-size="14" font-family="sans-serif">0</text>
+<path d="M80 450H940" stroke="#ddd"/>
+<text x="5" y="454" font-size="14" font-family="sans-serif">0.00619</text>
+<path d="M80 360H940" stroke="#ddd"/>
+<text x="5" y="364" font-size="14" font-family="sans-serif">0.0124</text>
+<path d="M80 270H940" stroke="#ddd"/>
+<text x="5" y="274" font-size="14" font-family="sans-serif">0.0186</text>
+<path d="M80 180H940" stroke="#ddd"/>
+<text x="5" y="184" font-size="14" font-family="sans-serif">0.0247</text>
+<path d="M80 90H940" stroke="#ddd"/>
+<text x="5" y="94" font-size="14" font-family="sans-serif">0.0309</text>
+<text x="80" y="565" font-size="14" font-family="sans-serif">1</text>
+<text x="220" y="565" font-size="14" font-family="sans-serif">2</text>
+<text x="360" y="565" font-size="14" font-family="sans-serif">4</text>
+<text x="500" y="565" font-size="14" font-family="sans-serif">8</text>
+<text x="640" y="565" font-size="14" font-family="sans-serif">16</text>
+<text x="780" y="565" font-size="14" font-family="sans-serif">32</text>
+<text x="920" y="565" font-size="14" font-family="sans-serif">64</text>
+<text x="420" y="600" font-size="14" font-family="sans-serif">Threads (log2 spacing)</text>
+<polyline points="80,138.21428571428572 220,329.09624785875656 360,386.9971000115855 500,414.0055695604141 640,424.63469041964237 780,418.1033160309829 920,406.4733966017329" fill="none" stroke="#2563eb" stroke-width="3"/>
+<text x="80" y="630" font-size="14" fill="#2563eb" font-family="sans-serif">synchronized-map</text>
+<polyline points="80,158.16625255501037 220,332.48848952342337 360,413.007680288561 500,423.4273316796452 640,430.5580214910502 780,421.5333785718424 920,412.6120157376222" fill="none" stroke="#d97706" stroke-width="3"/>
+<text x="310" y="630" font-size="14" fill="#d97706" font-family="sans-serif">concurrent-merge</text>
+<polyline points="80,160.9984543222086 220,331.36404578123324 360,403.56846238031795 500,426.9053976402877 640,428.7848042572471 780,432.395243284564 920,408.1709720831506" fill="none" stroke="#16a34a" stroke-width="3"/>
+<text x="540" y="630" font-size="14" fill="#16a34a" font-family="sans-serif">long-adder</text>
+<polyline points="80,168.86519657028663 220,329.4919124096954 360,408.3673497095357 500,431.0831498104948 640,414.15248911793185 780,417.24070912397286 920,397.3323817557783" fill="none" stroke="#9333ea" stroke-width="3"/>
+<text x="770" y="630" font-size="14" fill="#9333ea" font-family="sans-serif">local-maps</text>
+</svg>

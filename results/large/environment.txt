@@ -1,0 +1,7 @@
+java=23.0.2+7-58
+vm=Java HotSpot(TM) 64-Bit Server VM
+os=Windows 10
+processors=16
+warmups=2
+repeats=3
+corpus=C:\Users\denis\OneDrive\Рабочий стол\Новая папка (2)\лаба 2\lab2-concurrent-text-analyzer\generated-data\large
