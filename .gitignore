@@ -1,0 +1,7 @@
+.idea/
+*.iml
+target/
+generated-data/
+results/raw/
+.DS_Store
+Thumbs.db
