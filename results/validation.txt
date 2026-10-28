@@ -1,0 +1,9 @@
+Validation performed locally on Java 23.0.2; compiled with javac --release 21.
+SELF TEST PASSED: normalization; all safe analyzers; checker; forced lost update; worker IO failure.
+645 benchmark runs: 3 corpora x 43 configurations x (2 warmups + 3 measurements).
+All safe variants match the independently generated reference on every warmup and measurement.
+129 median summary rows; 9 corpus PNG charts and corresponding SVG charts.
+Intentional hashmap: 53 mismatches / 63 measured runs across all corpora.
+Intentional concurrent-get-put: 50 mismatches / 63 measured runs across all corpora.
+A separate cold Main invocation is not comparable to warmed benchmark medians.
+Maven and an actual Java 21 runtime were not available; their execution is not claimed.
