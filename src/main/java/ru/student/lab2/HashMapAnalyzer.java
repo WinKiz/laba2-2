@@ -6,10 +6,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class HashMapAnalyzer implements WordAnalyzer {
     public Map<String, Long> analyze(Path directory, int threads) throws IOException, InterruptedException {
         Map<String, Integer> counts = new HashMap<>();
-        Workers.run(TextFiles.list(directory), threads, files -> {
-            for (Path file : files) TextFiles.read(file, word -> counts.put(word, counts.getOrDefault(word, 0) + 1));
+        AnalysisSupport.run(AnalysisSupport.list(directory), threads, files -> {
+            for (Path file : files) AnalysisSupport.read(file, word -> counts.put(word, counts.getOrDefault(word, 0) + 1));
             return Boolean.TRUE;
         });
-        return TextFiles.toLong(counts);
+        return AnalysisSupport.toLong(counts);
     }
 }

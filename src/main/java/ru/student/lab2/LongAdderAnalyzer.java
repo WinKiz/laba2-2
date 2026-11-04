@@ -7,8 +7,8 @@ import java.util.concurrent.atomic.LongAdder;
 public final class LongAdderAnalyzer implements WordAnalyzer {
     public Map<String, Long> analyze(Path directory, int threads) throws IOException, InterruptedException {
         ConcurrentHashMap<String, LongAdder> counts = new ConcurrentHashMap<>();
-        Workers.run(TextFiles.list(directory), threads, files -> {
-            for (Path file : files) TextFiles.read(file,
+        AnalysisSupport.run(AnalysisSupport.list(directory), threads, files -> {
+            for (Path file : files) AnalysisSupport.read(file,
                     word -> counts.computeIfAbsent(word, key -> new LongAdder()).increment());
             return Boolean.TRUE;
         });

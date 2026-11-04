@@ -4,9 +4,9 @@ import java.nio.file.Path;
 import java.util.*;
 public final class LocalMapsAnalyzer implements WordAnalyzer {
     public Map<String, Long> analyze(Path directory, int threads) throws IOException, InterruptedException {
-        List<Map<String, Integer>> local = Workers.run(TextFiles.list(directory), threads, files -> {
+        List<Map<String, Integer>> local = AnalysisSupport.run(AnalysisSupport.list(directory), threads, files -> {
             Map<String, Integer> counts = new HashMap<>();
-            for (Path file : files) TextFiles.read(file, word -> counts.merge(word, 1, Math::addExact));
+            for (Path file : files) AnalysisSupport.read(file, word -> counts.merge(word, 1, Math::addExact));
             return counts;
         });
         Map<String, Long> result = new HashMap<>();

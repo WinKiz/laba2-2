@@ -15,19 +15,19 @@ public final class SelfTest {
         Files.writeString(fixture.resolve("distribution.txt"), "IGNORED words");
         Files.writeString(fixture.resolve("notes.txt"), "IGNORED words");
         Map<String, Long> expected = Map.of("word0001", 4L, "word0002", 1L, "ёж", 2L, "a42", 2L);
-        for (String name : Analyzers.NAMES) {
+        for (String name : WordAnalyzer.NAMES) {
             for (int threads : name.equals("sequential") ? new int[]{1} : new int[]{1, 2, 8}) {
                 if (threads > 1 && (name.equals("hashmap") || name.equals("concurrent-get-put"))) continue;
-                check(expected.equals(Analyzers.create(name).analyze(fixture, threads)), name + " normalization/count");
+                check(expected.equals(WordAnalyzer.create(name).analyze(fixture, threads)), name + " normalization/count");
             }
         }
-        check(!Statistics.difference(expected, Map.of()).equals("OK"), "missing keys");
+        check(!AnalysisSupport.difference(expected, Map.of()).equals("OK"), "missing keys");
         var wrong = new HashMap<>(expected);
         wrong.put("extra", 1L);
-        check(!Statistics.difference(expected, wrong).equals("OK"), "extra keys");
+        check(!AnalysisSupport.difference(expected, wrong).equals("OK"), "extra keys");
         wrong = new HashMap<>(expected);
         wrong.put("word0001", 5L);
-        check(!Statistics.difference(expected, wrong).equals("OK"), "wrong count");
+        check(!AnalysisSupport.difference(expected, wrong).equals("OK"), "wrong count");
         for (Map<String, Integer> counts : List.of(new ConcurrentHashMap<String, Integer>(),
                 Collections.synchronizedMap(new HashMap<String, Integer>()))) {
             counts.put("word", 10);
@@ -47,8 +47,8 @@ public final class SelfTest {
             check(counts.get("word") == 11, "forced lost update must be 11 rather than 12");
         }
         try {
-            Workers.run(List.of(fixture.resolve("missing.txt")), 2, files -> {
-                for (Path file : files) TextFiles.read(file, word -> {});
+            AnalysisSupport.run(List.of(fixture.resolve("missing.txt")), 2, files -> {
+                for (Path file : files) AnalysisSupport.read(file, word -> {});
                 return true;
             });
             throw new AssertionError("worker failure was hidden");
