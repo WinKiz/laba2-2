@@ -4,6 +4,10 @@ import java.util.*;
 public final class Main {
     private Main() {}
     public static void main(String[] args) throws Exception {
+        if (args.length == 0) {
+            demo();
+            return;
+        }
         if (args.length > 0 && args[0].equals("benchmark")) {
             benchmark(Arrays.copyOfRange(args, 1, args.length));
             return;
@@ -19,6 +23,29 @@ public final class Main {
         String check = AnalysisSupport.difference(expected, result);
         System.out.printf(java.util.Locale.ROOT, "%s threads=%d seconds=%.6f %s%n", args[2], threads, seconds, check);
         if (!check.equals("OK")) System.exit(2);
+    }
+
+    public static void demo() throws Exception {
+        Path directory = Path.of("generated-data", "ide-demo");
+        System.out.println("Demo mode: one run per variant, not a full benchmark.");
+        System.out.println("Data directory: " + directory.toAbsolutePath());
+        if (!Files.exists(directory)) {
+            TestDataGenerator.main(new String[]{directory.toString(), "128", "1000", "500"});
+        }
+        var expected = AnalysisSupport.load(directory);
+        int parallelThreads = Math.max(2, Math.min(4, Runtime.getRuntime().availableProcessors()));
+        for (String name : WordAnalyzer.NAMES) {
+            int threads = name.equals("sequential") ? 1 : parallelThreads;
+            var analyzer = WordAnalyzer.create(name);
+            long start = System.nanoTime();
+            var result = analyzer.analyze(directory, threads);
+            double seconds = (System.nanoTime() - start) / 1_000_000_000.0;
+            String check = AnalysisSupport.difference(expected, result);
+            System.out.printf(Locale.ROOT, "%s threads=%d seconds=%.6f %s%n", name, threads, seconds, check);
+        }
+        System.out.println("hashmap and concurrent-get-put are intentionally unsafe; MISMATCH is expected.");
+        System.out.println("An OK result for an unsafe variant does not prove thread safety.");
+        System.out.println("Full experiment: Main benchmark <directory> <output> 2 3 1,2,4,8,16,32,64");
     }
 
     public static void benchmark(String[] args) throws Exception {
