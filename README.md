@@ -4,12 +4,13 @@
 
 ## Сборка и проверка
 
-Требуется JDK 21 или новее. Выполнить PowerShell в папке проекта:
+Требуется JDK 21 или новее. Генератор запускайте один раз: повторный запуск в непустой каталог намеренно запрещён. Выполнить PowerShell в папке проекта:
 
 ```powershell
 .\build.ps1
 java -cp target/classes ru.student.lab2.SelfTest
-java -cp target/classes ru.student.lab2.Main generated-data/large 4 concurrent-merge
+java -cp target/classes ru.student.lab2.TestDataGenerator generated-data/demo 128 10000 500
+java -cp target/classes ru.student.lab2.Main generated-data/demo 4 concurrent-merge
 ```
 
 Альтернатива при установленном Maven: `mvn compile`. Maven в текущей среде отсутствует; pom.xml предоставлен, фактически проверена сборка javac --release 21 на JDK 23.0.2. Совместимость исходников/API и байткода с 21 проверяется компилятором; запуск непосредственно на JVM 21 не проверялся.
@@ -25,8 +26,9 @@ Main принимает **каталог, потоки, вариант** име�
 ```powershell
 java -cp target/classes ru.student.lab2.TestDataGenerator generated-data/new 128 10000 500
 java -Xms256m -Xmx1g -cp target/classes ru.student.lab2.Benchmark generated-data/new results/new 2 3 1,2,4,8,16,32,64
-python report.py
 ```
+
+Этот пример сохраняет новую серию в `results/new`. `report.py` строит сводный отчёт только для сохранённой тройки `small/medium/large`, поэтому результаты `new` автоматически не включаются. Для повторной обработки исходной тройки при наличии соответствующих корпусов выполните `python report.py`, затем `.\plots.ps1`.
 
 Параметры генератора: каталог, файлов, слов на файл, размер словаря, необязательный seed. Без seed каждый запуск получает новое случайное начальное состояние. С сохранённым seed можно повторить корпус; параметры и seed находятся в metadata.txt и results/corpora.md. Непустой каталог защищён от перезаписи. Полный рекомендуемый размер из примера: `128 250000 500` (32 млн слов); в сданном эксперименте уменьшены размеры для разумного времени, число файлов и весь диапазон потоков сохранены.
 

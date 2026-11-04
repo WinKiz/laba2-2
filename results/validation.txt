@@ -7,3 +7,5 @@ Intentional hashmap: 53 mismatches / 63 measured runs across all corpora.
 Intentional concurrent-get-put: 50 mismatches / 63 measured runs across all corpora.
 A separate cold Main invocation is not comparable to warmed benchmark medians.
 Maven and an actual Java 21 runtime were not available; their execution is not claimed.
+
+Re-audit 2026-11-04: independent Python recount of all three original corpora matches references; every SHA-256 matches saved corpus manifest. Verified 645 raw rows, 129 summary rows, medians, speedup, efficiency, correctness counts, 11 numbered answers and 9 PNG signatures. Java sources unchanged.
