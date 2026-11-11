@@ -1,0 +1,1 @@
+Verified 344 source records and 43 configurations. Median, min, max, correctness, speedup and efficiency reconciled with independent calculations. Source changes recalculate formulas; temporary changes restored. Three native charts exported. All sheets visually reviewed. No formula errors in exported workbook. Java source unchanged.
