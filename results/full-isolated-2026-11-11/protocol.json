@@ -1,0 +1,18 @@
+{
+  "warmups": 3,
+  "repeats": 5,
+  "timeout_seconds": 30,
+  "isolation": "One fresh JVM per algorithm/thread configuration.",
+  "timeout_policy": "Save thread dump, kill hung JVM, mark missing result TIMEOUT with blank time, continue remaining runs in a fresh JVM. Only unsafe variants required such recovery.",
+  "time_scope": "Same analyze call as Main.benchmark. JVM startup, reference loading, validation and CSV output are excluded.",
+  "corpora": {
+    "small": "large",
+    "medium": "full-medium",
+    "large": "full-large"
+  },
+  "java": "C:\\Program Files\\Java\\jdk-23\\bin\\java.exe",
+  "source_commit": "9a0d5ce634b0bee6d48d2fcb068bfa776d52c9ee",
+  "runner_sha256": "780d49103bd442d7eff2ac9abd6d27b9fbfc79a3438e1fe3d9d121657c214ce7",
+  "final_series_timeouts": 0,
+  "initial_attempt_hang": "../full-2026-11-11/diagnostics/hashmap-8-hang.txt"
+}

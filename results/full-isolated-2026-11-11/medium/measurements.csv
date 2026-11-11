@@ -1,0 +1,345 @@
+variant,threads,phase,run,time_seconds,correct,details
+sequential,1,warmup,1,1.002760100,true,OK
+sequential,1,warmup,2,1.006895800,true,OK
+sequential,1,warmup,3,0.965120100,true,OK
+sequential,1,measurement,1,0.954927000,true,OK
+sequential,1,measurement,2,0.966622100,true,OK
+sequential,1,measurement,3,0.960583700,true,OK
+sequential,1,measurement,4,0.947015100,true,OK
+sequential,1,measurement,5,0.967396300,true,OK
+hashmap,1,warmup,1,0.965457200,true,OK
+hashmap,1,warmup,2,0.983147200,true,OK
+hashmap,1,warmup,3,1.004579200,true,OK
+hashmap,1,measurement,1,1.002378700,true,OK
+hashmap,1,measurement,2,0.966449600,true,OK
+hashmap,1,measurement,3,0.969039500,true,OK
+hashmap,1,measurement,4,0.961075200,true,OK
+hashmap,1,measurement,5,0.969105100,true,OK
+hashmap,2,warmup,1,0.643736900,false,MISMATCH keys=433 first=word0000: expected=14450 actual=14447
+hashmap,2,warmup,2,0.595760600,false,MISMATCH keys=434 first=word0000: expected=14450 actual=14446
+hashmap,2,warmup,3,0.576307200,false,MISMATCH keys=438 first=word0000: expected=14450 actual=14447
+hashmap,2,measurement,1,0.561862800,false,MISMATCH keys=423 first=word0000: expected=14450 actual=14446
+hashmap,2,measurement,2,0.561955900,false,MISMATCH keys=426 first=word0000: expected=14450 actual=14447
+hashmap,2,measurement,3,0.576790900,false,MISMATCH keys=437 first=word0001: expected=9328 actual=9325
+hashmap,2,measurement,4,0.568648100,false,MISMATCH keys=432 first=word0000: expected=14450 actual=14447
+hashmap,2,measurement,5,0.572300100,false,MISMATCH keys=430 first=word0000: expected=14450 actual=14447
+hashmap,4,warmup,1,0.481328700,false,MISMATCH keys=471 first=word0000: expected=14450 actual=14436
+hashmap,4,warmup,2,0.357032100,false,MISMATCH keys=473 first=word0000: expected=14450 actual=14429
+hashmap,4,warmup,3,0.316021600,false,MISMATCH keys=474 first=word0000: expected=14450 actual=14436
+hashmap,4,measurement,1,0.327222200,false,MISMATCH keys=476 first=word0000: expected=14450 actual=14435
+hashmap,4,measurement,2,0.326664700,false,MISMATCH keys=478 first=word0000: expected=14450 actual=14432
+hashmap,4,measurement,3,0.323121200,false,MISMATCH keys=473 first=word0000: expected=14450 actual=14424
+hashmap,4,measurement,4,0.326225100,false,MISMATCH keys=470 first=word0000: expected=14450 actual=14430
+hashmap,4,measurement,5,0.315499600,false,MISMATCH keys=472 first=word0000: expected=14450 actual=14437
+hashmap,8,warmup,1,0.456529900,false,MISMATCH keys=482 first=word0000: expected=14450 actual=14423
+hashmap,8,warmup,2,0.249868500,false,MISMATCH keys=490 first=word0000: expected=14450 actual=14420
+hashmap,8,warmup,3,0.206557000,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14416
+hashmap,8,measurement,1,0.200303700,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14398
+hashmap,8,measurement,2,0.213140300,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14415
+hashmap,8,measurement,3,0.224125400,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14410
+hashmap,8,measurement,4,0.210536100,false,MISMATCH keys=486 first=word0000: expected=14450 actual=14408
+hashmap,8,measurement,5,0.212636100,false,MISMATCH keys=489 first=word0000: expected=14450 actual=14417
+hashmap,16,warmup,1,0.436247000,false,MISMATCH keys=490 first=word0000: expected=14450 actual=14401
+hashmap,16,warmup,2,0.189065600,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14390
+hashmap,16,warmup,3,0.102872000,false,ERROR java.io.IOException: Worker failed
+hashmap,16,measurement,1,0.149294700,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14394
+hashmap,16,measurement,2,0.152258500,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14410
+hashmap,16,measurement,3,0.159877400,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14407
+hashmap,16,measurement,4,0.158217400,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14398
+hashmap,16,measurement,5,0.156331300,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14404
+hashmap,32,warmup,1,1.666138900,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14409
+hashmap,32,warmup,2,0.255924400,false,MISMATCH keys=490 first=word0000: expected=14450 actual=14301
+hashmap,32,warmup,3,0.166326700,false,MISMATCH keys=496 first=word0000: expected=14450 actual=14366
+hashmap,32,measurement,1,0.168739000,false,MISMATCH keys=493 first=word0000: expected=14450 actual=14390
+hashmap,32,measurement,2,0.159923500,false,MISMATCH keys=491 first=word0000: expected=14450 actual=14383
+hashmap,32,measurement,3,0.171328300,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14375
+hashmap,32,measurement,4,0.168621100,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14380
+hashmap,32,measurement,5,0.163208400,false,MISMATCH keys=493 first=word0000: expected=14450 actual=14406
+hashmap,64,warmup,1,2.597076800,false,MISMATCH keys=462 first=word0000: expected=14450 actual=14438
+hashmap,64,warmup,2,0.384382500,false,MISMATCH keys=483 first=word0000: expected=14450 actual=14423
+hashmap,64,warmup,3,0.166184000,false,MISMATCH keys=493 first=word0000: expected=14450 actual=14404
+hashmap,64,measurement,1,0.168969400,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14377
+hashmap,64,measurement,2,0.167473200,false,MISMATCH keys=493 first=word0000: expected=14450 actual=14392
+hashmap,64,measurement,3,0.172008600,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14418
+hashmap,64,measurement,4,0.163441500,false,MISMATCH keys=493 first=word0000: expected=14450 actual=14394
+hashmap,64,measurement,5,0.166188400,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14365
+synchronized-map,1,warmup,1,0.988116800,true,OK
+synchronized-map,1,warmup,2,0.994578000,true,OK
+synchronized-map,1,warmup,3,0.974165400,true,OK
+synchronized-map,1,measurement,1,0.969020800,true,OK
+synchronized-map,1,measurement,2,0.957926600,true,OK
+synchronized-map,1,measurement,3,0.967661000,true,OK
+synchronized-map,1,measurement,4,0.973545700,true,OK
+synchronized-map,1,measurement,5,0.967750300,true,OK
+synchronized-map,2,warmup,1,0.995628900,true,OK
+synchronized-map,2,warmup,2,0.724040300,true,OK
+synchronized-map,2,warmup,3,0.705615800,true,OK
+synchronized-map,2,measurement,1,0.775060400,true,OK
+synchronized-map,2,measurement,2,0.784193500,true,OK
+synchronized-map,2,measurement,3,0.803344200,true,OK
+synchronized-map,2,measurement,4,0.702842700,true,OK
+synchronized-map,2,measurement,5,0.788688300,true,OK
+synchronized-map,4,warmup,1,1.279058300,true,OK
+synchronized-map,4,warmup,2,1.130007800,true,OK
+synchronized-map,4,warmup,3,1.184353400,true,OK
+synchronized-map,4,measurement,1,1.142263900,true,OK
+synchronized-map,4,measurement,2,1.160339600,true,OK
+synchronized-map,4,measurement,3,1.157657900,true,OK
+synchronized-map,4,measurement,4,1.255382000,true,OK
+synchronized-map,4,measurement,5,1.168778800,true,OK
+synchronized-map,8,warmup,1,1.296768700,true,OK
+synchronized-map,8,warmup,2,1.189131600,true,OK
+synchronized-map,8,warmup,3,1.144523600,true,OK
+synchronized-map,8,measurement,1,1.256034600,true,OK
+synchronized-map,8,measurement,2,1.143465200,true,OK
+synchronized-map,8,measurement,3,1.176062200,true,OK
+synchronized-map,8,measurement,4,1.161120000,true,OK
+synchronized-map,8,measurement,5,1.205642500,true,OK
+synchronized-map,16,warmup,1,1.324226000,true,OK
+synchronized-map,16,warmup,2,1.159133900,true,OK
+synchronized-map,16,warmup,3,1.170403000,true,OK
+synchronized-map,16,measurement,1,1.144001300,true,OK
+synchronized-map,16,measurement,2,1.122145200,true,OK
+synchronized-map,16,measurement,3,1.160140000,true,OK
+synchronized-map,16,measurement,4,1.150174300,true,OK
+synchronized-map,16,measurement,5,1.161324700,true,OK
+synchronized-map,32,warmup,1,1.304577800,true,OK
+synchronized-map,32,warmup,2,1.164479500,true,OK
+synchronized-map,32,warmup,3,1.206331600,true,OK
+synchronized-map,32,measurement,1,1.214937900,true,OK
+synchronized-map,32,measurement,2,1.172695600,true,OK
+synchronized-map,32,measurement,3,1.148168600,true,OK
+synchronized-map,32,measurement,4,1.134842200,true,OK
+synchronized-map,32,measurement,5,1.215934300,true,OK
+synchronized-map,64,warmup,1,1.465066400,true,OK
+synchronized-map,64,warmup,2,1.298730200,true,OK
+synchronized-map,64,warmup,3,1.223900700,true,OK
+synchronized-map,64,measurement,1,1.258365900,true,OK
+synchronized-map,64,measurement,2,1.188623700,true,OK
+synchronized-map,64,measurement,3,1.271899700,true,OK
+synchronized-map,64,measurement,4,1.230757800,true,OK
+synchronized-map,64,measurement,5,1.222167400,true,OK
+concurrent-get-put,1,warmup,1,1.024805400,true,OK
+concurrent-get-put,1,warmup,2,0.997095400,true,OK
+concurrent-get-put,1,warmup,3,0.966886200,true,OK
+concurrent-get-put,1,measurement,1,0.963343400,true,OK
+concurrent-get-put,1,measurement,2,0.973329500,true,OK
+concurrent-get-put,1,measurement,3,0.961003200,true,OK
+concurrent-get-put,1,measurement,4,0.963970300,true,OK
+concurrent-get-put,1,measurement,5,0.970864200,true,OK
+concurrent-get-put,2,warmup,1,0.695465600,false,MISMATCH keys=434 first=word0000: expected=14450 actual=14444
+concurrent-get-put,2,warmup,2,0.622498900,false,MISMATCH keys=444 first=word0000: expected=14450 actual=14447
+concurrent-get-put,2,warmup,3,0.634396400,false,MISMATCH keys=448 first=word0000: expected=14450 actual=14447
+concurrent-get-put,2,measurement,1,0.605472200,false,MISMATCH keys=427 first=word0000: expected=14450 actual=14447
+concurrent-get-put,2,measurement,2,0.617435900,false,MISMATCH keys=447 first=word0000: expected=14450 actual=14444
+concurrent-get-put,2,measurement,3,0.603066500,false,MISMATCH keys=445 first=word0000: expected=14450 actual=14447
+concurrent-get-put,2,measurement,4,0.615480600,false,MISMATCH keys=433 first=word0000: expected=14450 actual=14446
+concurrent-get-put,2,measurement,5,0.621300700,false,MISMATCH keys=443 first=word0000: expected=14450 actual=14447
+concurrent-get-put,4,warmup,1,0.519429700,false,MISMATCH keys=479 first=word0000: expected=14450 actual=14429
+concurrent-get-put,4,warmup,2,0.364748100,false,MISMATCH keys=469 first=word0000: expected=14450 actual=14440
+concurrent-get-put,4,warmup,3,0.339683900,false,MISMATCH keys=467 first=word0000: expected=14450 actual=14436
+concurrent-get-put,4,measurement,1,0.338521800,false,MISMATCH keys=471 first=word0000: expected=14450 actual=14432
+concurrent-get-put,4,measurement,2,0.334699300,false,MISMATCH keys=471 first=word0000: expected=14450 actual=14433
+concurrent-get-put,4,measurement,3,0.351324400,false,MISMATCH keys=475 first=word0000: expected=14450 actual=14433
+concurrent-get-put,4,measurement,4,0.356311000,false,MISMATCH keys=476 first=word0000: expected=14450 actual=14441
+concurrent-get-put,4,measurement,5,0.378629500,false,MISMATCH keys=480 first=word0000: expected=14450 actual=14434
+concurrent-get-put,8,warmup,1,0.475510600,false,MISMATCH keys=490 first=word0000: expected=14450 actual=14416
+concurrent-get-put,8,warmup,2,0.265328700,false,MISMATCH keys=488 first=word0000: expected=14450 actual=14404
+concurrent-get-put,8,warmup,3,0.229115100,false,MISMATCH keys=489 first=word0000: expected=14450 actual=14409
+concurrent-get-put,8,measurement,1,0.217975900,false,MISMATCH keys=488 first=word0000: expected=14450 actual=14394
+concurrent-get-put,8,measurement,2,0.226530200,false,MISMATCH keys=489 first=word0000: expected=14450 actual=14405
+concurrent-get-put,8,measurement,3,0.213143400,false,MISMATCH keys=484 first=word0000: expected=14450 actual=14388
+concurrent-get-put,8,measurement,4,0.218833200,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14414
+concurrent-get-put,8,measurement,5,0.235283600,false,MISMATCH keys=490 first=word0000: expected=14450 actual=14410
+concurrent-get-put,16,warmup,1,0.460376300,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14403
+concurrent-get-put,16,warmup,2,0.221354500,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14233
+concurrent-get-put,16,warmup,3,0.193104800,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14184
+concurrent-get-put,16,measurement,1,0.174740600,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14378
+concurrent-get-put,16,measurement,2,0.223292700,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14356
+concurrent-get-put,16,measurement,3,0.164746700,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14386
+concurrent-get-put,16,measurement,4,0.164207900,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14373
+concurrent-get-put,16,measurement,5,0.170989900,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14388
+concurrent-get-put,32,warmup,1,1.132910300,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14037
+concurrent-get-put,32,warmup,2,0.234074000,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14374
+concurrent-get-put,32,warmup,3,0.192068900,false,MISMATCH keys=498 first=word0000: expected=14450 actual=14337
+concurrent-get-put,32,measurement,1,0.168832800,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14351
+concurrent-get-put,32,measurement,2,0.167644900,false,MISMATCH keys=497 first=word0000: expected=14450 actual=13778
+concurrent-get-put,32,measurement,3,0.170030400,false,MISMATCH keys=496 first=word0000: expected=14450 actual=14371
+concurrent-get-put,32,measurement,4,0.167708800,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14379
+concurrent-get-put,32,measurement,5,0.179681800,false,MISMATCH keys=495 first=word0000: expected=14450 actual=14227
+concurrent-get-put,64,warmup,1,3.237092500,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14381
+concurrent-get-put,64,warmup,2,1.753154600,false,MISMATCH keys=484 first=word0000: expected=14450 actual=14431
+concurrent-get-put,64,warmup,3,0.217303900,false,MISMATCH keys=494 first=word0000: expected=14450 actual=13963
+concurrent-get-put,64,measurement,1,0.187566500,false,MISMATCH keys=492 first=word0000: expected=14450 actual=14266
+concurrent-get-put,64,measurement,2,0.177679900,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14353
+concurrent-get-put,64,measurement,3,0.187765600,false,MISMATCH keys=496 first=word0000: expected=14450 actual=14366
+concurrent-get-put,64,measurement,4,0.175295800,false,MISMATCH keys=497 first=word0000: expected=14450 actual=14387
+concurrent-get-put,64,measurement,5,0.183866500,false,MISMATCH keys=494 first=word0000: expected=14450 actual=14396
+concurrent-merge,1,warmup,1,1.011504900,true,OK
+concurrent-merge,1,warmup,2,0.991490000,true,OK
+concurrent-merge,1,warmup,3,0.967478200,true,OK
+concurrent-merge,1,measurement,1,0.986907700,true,OK
+concurrent-merge,1,measurement,2,1.004745800,true,OK
+concurrent-merge,1,measurement,3,0.972804000,true,OK
+concurrent-merge,1,measurement,4,0.977337600,true,OK
+concurrent-merge,1,measurement,5,0.970908500,true,OK
+concurrent-merge,2,warmup,1,0.686830000,true,OK
+concurrent-merge,2,warmup,2,0.628356300,true,OK
+concurrent-merge,2,warmup,3,0.607373300,true,OK
+concurrent-merge,2,measurement,1,0.613592500,true,OK
+concurrent-merge,2,measurement,2,0.596991800,true,OK
+concurrent-merge,2,measurement,3,0.596676200,true,OK
+concurrent-merge,2,measurement,4,0.595517100,true,OK
+concurrent-merge,2,measurement,5,0.610025200,true,OK
+concurrent-merge,4,warmup,1,0.493952900,true,OK
+concurrent-merge,4,warmup,2,0.365904600,true,OK
+concurrent-merge,4,warmup,3,0.343048100,true,OK
+concurrent-merge,4,measurement,1,0.341508600,true,OK
+concurrent-merge,4,measurement,2,0.329493800,true,OK
+concurrent-merge,4,measurement,3,0.354948800,true,OK
+concurrent-merge,4,measurement,4,0.348166400,true,OK
+concurrent-merge,4,measurement,5,0.347804500,true,OK
+concurrent-merge,8,warmup,1,0.407112500,true,OK
+concurrent-merge,8,warmup,2,0.242299900,true,OK
+concurrent-merge,8,warmup,3,0.235174200,true,OK
+concurrent-merge,8,measurement,1,0.214185300,true,OK
+concurrent-merge,8,measurement,2,0.222947200,true,OK
+concurrent-merge,8,measurement,3,0.208904000,true,OK
+concurrent-merge,8,measurement,4,0.218179400,true,OK
+concurrent-merge,8,measurement,5,0.220037400,true,OK
+concurrent-merge,16,warmup,1,0.522770800,true,OK
+concurrent-merge,16,warmup,2,0.228642500,true,OK
+concurrent-merge,16,warmup,3,0.190166500,true,OK
+concurrent-merge,16,measurement,1,0.188980500,true,OK
+concurrent-merge,16,measurement,2,0.183245800,true,OK
+concurrent-merge,16,measurement,3,0.160878700,true,OK
+concurrent-merge,16,measurement,4,0.162408500,true,OK
+concurrent-merge,16,measurement,5,0.180556700,true,OK
+concurrent-merge,32,warmup,1,3.065033100,true,OK
+concurrent-merge,32,warmup,2,0.333831000,true,OK
+concurrent-merge,32,warmup,3,0.165489900,true,OK
+concurrent-merge,32,measurement,1,0.165282200,true,OK
+concurrent-merge,32,measurement,2,0.171865800,true,OK
+concurrent-merge,32,measurement,3,0.146966500,true,OK
+concurrent-merge,32,measurement,4,0.147904800,true,OK
+concurrent-merge,32,measurement,5,0.146214800,true,OK
+concurrent-merge,64,warmup,1,3.677231400,true,OK
+concurrent-merge,64,warmup,2,1.163102400,true,OK
+concurrent-merge,64,warmup,3,0.261991400,true,OK
+concurrent-merge,64,measurement,1,0.187725300,true,OK
+concurrent-merge,64,measurement,2,0.154366000,true,OK
+concurrent-merge,64,measurement,3,0.151659000,true,OK
+concurrent-merge,64,measurement,4,0.165057700,true,OK
+concurrent-merge,64,measurement,5,0.155127300,true,OK
+long-adder,1,warmup,1,0.929852200,true,OK
+long-adder,1,warmup,2,0.924274500,true,OK
+long-adder,1,warmup,3,0.924015600,true,OK
+long-adder,1,measurement,1,0.901551800,true,OK
+long-adder,1,measurement,2,0.891315300,true,OK
+long-adder,1,measurement,3,0.915539300,true,OK
+long-adder,1,measurement,4,0.898004000,true,OK
+long-adder,1,measurement,5,0.900235900,true,OK
+long-adder,2,warmup,1,0.680389400,true,OK
+long-adder,2,warmup,2,0.578647900,true,OK
+long-adder,2,warmup,3,0.557656000,true,OK
+long-adder,2,measurement,1,0.555293800,true,OK
+long-adder,2,measurement,2,0.544932800,true,OK
+long-adder,2,measurement,3,0.550063100,true,OK
+long-adder,2,measurement,4,0.559631900,true,OK
+long-adder,2,measurement,5,0.550830900,true,OK
+long-adder,4,warmup,1,0.504799500,true,OK
+long-adder,4,warmup,2,0.363085900,true,OK
+long-adder,4,warmup,3,0.309740100,true,OK
+long-adder,4,measurement,1,0.309440400,true,OK
+long-adder,4,measurement,2,0.325392500,true,OK
+long-adder,4,measurement,3,0.307093900,true,OK
+long-adder,4,measurement,4,0.299965900,true,OK
+long-adder,4,measurement,5,0.298283500,true,OK
+long-adder,8,warmup,1,0.422633700,true,OK
+long-adder,8,warmup,2,0.247760300,true,OK
+long-adder,8,warmup,3,0.192124800,true,OK
+long-adder,8,measurement,1,0.195071200,true,OK
+long-adder,8,measurement,2,0.196875300,true,OK
+long-adder,8,measurement,3,0.202167600,true,OK
+long-adder,8,measurement,4,0.203870400,true,OK
+long-adder,8,measurement,5,0.202983500,true,OK
+long-adder,16,warmup,1,0.439989300,true,OK
+long-adder,16,warmup,2,0.198713000,true,OK
+long-adder,16,warmup,3,0.174023500,true,OK
+long-adder,16,measurement,1,0.162312200,true,OK
+long-adder,16,measurement,2,0.138599300,true,OK
+long-adder,16,measurement,3,0.144718200,true,OK
+long-adder,16,measurement,4,0.147513300,true,OK
+long-adder,16,measurement,5,0.150761700,true,OK
+long-adder,32,warmup,1,2.773983800,true,OK
+long-adder,32,warmup,2,0.333886400,true,OK
+long-adder,32,warmup,3,0.157427600,true,OK
+long-adder,32,measurement,1,0.160359700,true,OK
+long-adder,32,measurement,2,0.168503300,true,OK
+long-adder,32,measurement,3,0.147680800,true,OK
+long-adder,32,measurement,4,0.150306500,true,OK
+long-adder,32,measurement,5,0.152085600,true,OK
+long-adder,64,warmup,1,6.125904200,true,OK
+long-adder,64,warmup,2,1.800681500,true,OK
+long-adder,64,warmup,3,0.169485600,true,OK
+long-adder,64,measurement,1,0.166163900,true,OK
+long-adder,64,measurement,2,0.161411800,true,OK
+long-adder,64,measurement,3,0.157313100,true,OK
+long-adder,64,measurement,4,0.149951100,true,OK
+long-adder,64,measurement,5,0.153251600,true,OK
+local-maps,1,warmup,1,0.992071600,true,OK
+local-maps,1,warmup,2,0.969131000,true,OK
+local-maps,1,warmup,3,0.982438300,true,OK
+local-maps,1,measurement,1,0.947383000,true,OK
+local-maps,1,measurement,2,0.942767800,true,OK
+local-maps,1,measurement,3,0.960376200,true,OK
+local-maps,1,measurement,4,0.953685700,true,OK
+local-maps,1,measurement,5,0.947215700,true,OK
+local-maps,2,warmup,1,0.627644500,true,OK
+local-maps,2,warmup,2,0.546856200,true,OK
+local-maps,2,warmup,3,0.483724900,true,OK
+local-maps,2,measurement,1,0.471537200,true,OK
+local-maps,2,measurement,2,0.485212100,true,OK
+local-maps,2,measurement,3,0.479444000,true,OK
+local-maps,2,measurement,4,0.483216400,true,OK
+local-maps,2,measurement,5,0.494806900,true,OK
+local-maps,4,warmup,1,0.457272000,true,OK
+local-maps,4,warmup,2,0.285810300,true,OK
+local-maps,4,warmup,3,0.267877600,true,OK
+local-maps,4,measurement,1,0.260076100,true,OK
+local-maps,4,measurement,2,0.253604100,true,OK
+local-maps,4,measurement,3,0.260806400,true,OK
+local-maps,4,measurement,4,0.315971600,true,OK
+local-maps,4,measurement,5,0.282158200,true,OK
+local-maps,8,warmup,1,0.417658400,true,OK
+local-maps,8,warmup,2,0.226773300,true,OK
+local-maps,8,warmup,3,0.181550100,true,OK
+local-maps,8,measurement,1,0.173023900,true,OK
+local-maps,8,measurement,2,0.175390200,true,OK
+local-maps,8,measurement,3,0.178974100,true,OK
+local-maps,8,measurement,4,0.172720100,true,OK
+local-maps,8,measurement,5,0.179167300,true,OK
+local-maps,16,warmup,1,0.417948700,true,OK
+local-maps,16,warmup,2,0.181440500,true,OK
+local-maps,16,warmup,3,0.132323300,true,OK
+local-maps,16,measurement,1,0.127692100,true,OK
+local-maps,16,measurement,2,0.128069200,true,OK
+local-maps,16,measurement,3,0.131504000,true,OK
+local-maps,16,measurement,4,0.140414200,true,OK
+local-maps,16,measurement,5,0.141646700,true,OK
+local-maps,32,warmup,1,2.974225800,true,OK
+local-maps,32,warmup,2,0.352728100,true,OK
+local-maps,32,warmup,3,0.154681200,true,OK
+local-maps,32,measurement,1,0.155394900,true,OK
+local-maps,32,measurement,2,0.149643100,true,OK
+local-maps,32,measurement,3,0.157272700,true,OK
+local-maps,32,measurement,4,0.164023100,true,OK
+local-maps,32,measurement,5,0.164880500,true,OK
+local-maps,64,warmup,1,1.370053400,true,OK
+local-maps,64,warmup,2,0.338494500,true,OK
+local-maps,64,warmup,3,0.153169400,true,OK
+local-maps,64,measurement,1,0.142843200,true,OK
+local-maps,64,measurement,2,0.149652300,true,OK
+local-maps,64,measurement,3,0.144869300,true,OK
+local-maps,64,measurement,4,0.146072700,true,OK
+local-maps,64,measurement,5,0.143867300,true,OK

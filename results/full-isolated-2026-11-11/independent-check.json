@@ -1,0 +1,26 @@
+[
+  {
+    "corpus": "small",
+    "files": 128,
+    "words": 1280000,
+    "unique": 500,
+    "probability_sum": 0.9999999999999999,
+    "independent_recount": "PASS"
+  },
+  {
+    "corpus": "medium",
+    "files": 128,
+    "words": 8000000,
+    "unique": 500,
+    "probability_sum": 0.9999999999999996,
+    "independent_recount": "PASS"
+  },
+  {
+    "corpus": "large",
+    "files": 128,
+    "words": 32000000,
+    "unique": 500,
+    "probability_sum": 1.0000000000000007,
+    "independent_recount": "PASS"
+  }
+]

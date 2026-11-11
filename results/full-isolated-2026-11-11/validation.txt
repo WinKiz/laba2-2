@@ -1,0 +1,7 @@
+Full experiment 2026-11-11, including 128 files x 250000 words = 32 million. Compiled --release 21 on Java 23.0.2 and ran SelfTest successfully. Small corpus hashes matched the original manifest; medium and large were newly generated and their hashes are saved in corpora.json.
+1032 benchmark observations: 129 configurations x (3 warmups + 5 measurements). All safe variants matched expected statistics in every run.
+Workbook authored with Artifact Tool, formula values independently checked for all 129 configurations. Live dependency test doubled five sequential times, confirmed summary recalculation, then restored observations. No formula errors found.
+Exported XLSX checked: 5 worksheets, 10 editable native charts, formulas, bound chart sources and exported series strokes. Visual previews checked for all five worksheets and representative charts. Excel desktop itself was not used to validate execution.
+Original experiment files were preserved. This series has its own folder, corpus labels and source version.
+
+Independent Python recount: 128 files per corpus; 1280000 / 8000000 / 32000000 words; exact match to every reference; 500 positive probabilities sum to 1. Initial non-isolated HashMap hang preserved separately. Authoritative isolated series: zero timeouts and all 1032 runs completed. Twelve production Java source files unchanged.

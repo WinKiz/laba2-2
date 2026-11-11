@@ -1,0 +1,36 @@
+variant,threads,phase,run,time_seconds,correct,details
+sequential,1,warmup,1,3.273466800,true,OK
+sequential,1,warmup,2,3.656670000,true,OK
+sequential,1,warmup,3,3.592423300,true,OK
+sequential,1,measurement,1,3.602728200,true,OK
+sequential,1,measurement,2,3.583584000,true,OK
+sequential,1,measurement,3,3.575268700,true,OK
+sequential,1,measurement,4,3.597533000,true,OK
+sequential,1,measurement,5,3.604383200,true,OK
+hashmap,1,warmup,1,3.526564400,true,OK
+hashmap,1,warmup,2,3.586677200,true,OK
+hashmap,1,warmup,3,3.528559600,true,OK
+hashmap,1,measurement,1,3.518999200,true,OK
+hashmap,1,measurement,2,3.533061900,true,OK
+hashmap,1,measurement,3,3.488800500,true,OK
+hashmap,1,measurement,4,3.520986100,true,OK
+hashmap,1,measurement,5,3.523181400,true,OK
+hashmap,2,warmup,1,2.127604500,false,MISMATCH keys=468 first=word0001: expected=24406 actual=24404
+hashmap,2,warmup,2,2.143264700,false,MISMATCH keys=471 first=word0000: expected=20663 actual=20660
+hashmap,2,warmup,3,2.150348000,false,MISMATCH keys=478 first=word0000: expected=20663 actual=20659
+hashmap,2,measurement,1,2.136179400,false,MISMATCH keys=478 first=word0000: expected=20663 actual=20658
+hashmap,2,measurement,2,2.155638400,false,MISMATCH keys=474 first=word0000: expected=20663 actual=20659
+hashmap,2,measurement,3,2.149163800,false,MISMATCH keys=478 first=word0000: expected=20663 actual=20661
+hashmap,2,measurement,4,2.172923700,false,MISMATCH keys=470 first=word0000: expected=20663 actual=20661
+hashmap,2,measurement,5,2.113555400,false,MISMATCH keys=472 first=word0000: expected=20663 actual=20661
+hashmap,4,warmup,1,1.261595700,false,MISMATCH keys=490 first=word0000: expected=20663 actual=20657
+hashmap,4,warmup,2,1.196407400,false,MISMATCH keys=495 first=word0000: expected=20663 actual=20653
+hashmap,4,warmup,3,1.247086600,false,MISMATCH keys=492 first=word0000: expected=20663 actual=20650
+hashmap,4,measurement,1,1.230340500,false,MISMATCH keys=493 first=word0000: expected=20663 actual=20653
+hashmap,4,measurement,2,1.217816700,false,MISMATCH keys=491 first=word0000: expected=20663 actual=20655
+hashmap,4,measurement,3,1.240491800,false,MISMATCH keys=491 first=word0000: expected=20663 actual=20659
+hashmap,4,measurement,4,1.204879100,false,MISMATCH keys=492 first=word0000: expected=20663 actual=20658
+hashmap,4,measurement,5,1.250504000,false,MISMATCH keys=494 first=word0000: expected=20663 actual=20653
+hashmap,8,warmup,1,0.792028100,false,MISMATCH keys=496 first=word0000: expected=20663 actual=20639
+hashmap,8,warmup,2,0.769853600,false,MISMATCH keys=497 first=word0000: expected=20663 actual=20642
+hashmap,8,warmup,3,0.795869900,false,MISMATCH keys=498 first=word0000: expected=20663 actual=20639
